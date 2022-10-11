@@ -1,9 +1,9 @@
 resource "aws_db_instance" "default" {
   allocated_storage    = 10
   identifier          = local.TAG_PREFIX
-  engine               = var.ENGINE
-  engine_version       = var.ENGINE_VERSION
-  instance_class       = var.INSTANCE_CLASS
+  engine               = var.RDS_ENGINE
+  engine_version       = var.RDS_ENGINE_VERSION
+  instance_class       = var.RDS_INSTANCE_CLASS
   username             = "admin"
   password             = "admin123"
   parameter_group_name = aws_db_parameter_group.main.name
